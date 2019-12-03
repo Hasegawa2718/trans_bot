@@ -30,13 +30,13 @@ async def on_message(message):
                 convert_string = translator.translate(str, src=befor_lang, dest='en')
                 embed = discord.Embed(title='変換結果', color=0xff0000)
                 embed.add_field(name='Befor', value=str)
-                embed.add_field(name='After', value=convert_string.text)
+                embed.add_field(name='After', value=convert_string.text, inline=False)
                 await message.channel.send(embed=embed)
             else:
                 convert_string = translator.translate(str, src=befor_lang, dest='ja')
                 embed = discord.Embed(title='変換結果', color=0xff0000)
                 embed.add_field(name='Befor', value=str)
-                embed.add_field(name='After', value=convert_string.text)
+                embed.add_field(name='After', value=convert_string.text, inline=False)
                 await message.channel.send(embed=embed)
         else:
             trans, str = list(say.split('='))
