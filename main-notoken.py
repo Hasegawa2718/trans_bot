@@ -43,7 +43,7 @@ async def on_message(message):
             convert_string = translator.translate(str, src=befor_lang, dest=after_lang)
             embed = discord.Embed(title='変換結果', color=0xff0000)
             embed.add_field(name='Befor', value=str)
-            embed.add_field(name='After', value=convert_string.text, inline=Fals)
+            embed.add_field(name='After', value=convert_string.text, inline=False)
             await message.channel.send(embed=embed)
 
     if message.content.startswith('!detect'):
