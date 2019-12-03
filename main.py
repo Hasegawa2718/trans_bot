@@ -1,7 +1,7 @@
 import discord
 from googletrans import Translator
 
-TOKEN = 'NjI0MjI1NTU3NDA3ODU4NzI4.XYYX_w.uKcMxHb0XQWEjI8d1OjN8T3Jl3Y'
+TOKEN = 'NjI0MjI1NTU3NDA3ODU4NzI4.XeZV9Q.tUVZtYLoKlbTIyXlVkRxfrOiIAk'
 
 client = discord.Client()
 translator = Translator()
