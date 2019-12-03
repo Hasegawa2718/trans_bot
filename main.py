@@ -39,8 +39,7 @@ async def on_message(message):
                 embed.add_field(name='After', value=convert_string.text, inline=False)
                 await message.channel.send(embed=embed)
         else:
-            trans, str = list(say.split('='))
-            befor_lang, after_lang = list(trans.split('-'))
+            befor_lang, after_lang, str = list(say.split('-'))
             convert_string = translator.translate(str, src=befor_lang, dest=after_lang)
             embed = discord.Embed(title='変換結果', color=0xff0000)
             embed.add_field(name='Befor', value=str)
