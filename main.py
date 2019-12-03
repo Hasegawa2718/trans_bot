@@ -48,7 +48,7 @@ async def on_message(message):
 
     if message.content.startswith('!detect'):
         say = message.content
-        s = say.lstrip('!detect ')
+        s = say[8:]
         detect = translator.detect(s)
         m = 'この文字列の言語はたぶん ' + detect.lang + ' です。'
         await message.channel.send(m)
