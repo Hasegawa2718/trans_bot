@@ -1,7 +1,7 @@
 import discord
 from googletrans import Translator
 
-TOKEN = 'NjI0MjI1NTU3NDA3ODU4NzI4.Xm-btA.NXO6gWPZtJX-1kvw1y4hlyuJ7Pc'
+TOKEN = 'NjI0MjI1NTU3NDA3ODU4NzI4.Xm-c5A.Pa3hxslar9yCNTkA5p70xKgZL14'
 
 client = discord.Client()
 translator = Translator()
@@ -29,20 +29,20 @@ async def on_message(message):
             if befor_lang == 'ja':
                 convert_string = translator.translate(str, src=befor_lang, dest='en')
                 embed = discord.Embed(title='変換結果', color=0xff0000)
-                embed.add_field(name='Befor', value=str)
+                embed.add_field(name='Before', value=str)
                 embed.add_field(name='After', value=convert_string.text, inline=False)
                 await message.channel.send(embed=embed)
             else:
                 convert_string = translator.translate(str, src=befor_lang, dest='ja')
                 embed = discord.Embed(title='変換結果', color=0xff0000)
-                embed.add_field(name='Befor', value=str)
+                embed.add_field(name='Before', value=str)
                 embed.add_field(name='After', value=convert_string.text, inline=False)
                 await message.channel.send(embed=embed)
         else:
             befor_lang, after_lang, str = list(say.split('-'))
             convert_string = translator.translate(str, src=befor_lang, dest=after_lang)
             embed = discord.Embed(title='変換結果', color=0xff0000)
-            embed.add_field(name='Befor', value=str)
+            embed.add_field(name='Before', value=str)
             embed.add_field(name='After', value=convert_string.text, inline=False)
             await message.channel.send(embed=embed)
 
